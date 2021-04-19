@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de productos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+    <h2>Listado de productos</h2>
+    </header>
+
+   <main>
+    <section id=filtros>
+    <form>
+    <fieldset>
+        <legend>Filtros</legend>
+        <label for="listadoCategoria">Categoría</label>
+          <select id="listadoCategoria" required>
+            
+          </select>
+        <label for="nombreProducto">Nombre producto</label>
+        <input type="text" id="nombreProducto" pattern="[a-zA-Z0-9]{2,100}" title="Debes ingresar solo letras y números" required>
+        <button type="submit" id="botonBuscar">Buscar</button>
+    </fieldset>
+    </form>
+    </section>
+    <br>
+    <section id=tabla>
+        <table>
+            <tr>
+                <th ><a href="" id="codigo">Código</a> </th>
+                <th ><a href="" id="producto">Producto</a> </th>
+                <th ><a href="" id="categoria">Categoría</a> </th>
+                <th ><a href="" id="precio">Precio</a> </th>
+                <th ><a href="" id="proveedor">Proveedor</a> </th>
+            </tr>
+            <tbody id="contenidoTabla"></tbody>
+        </table>
+    </section>
+    </main> 
+    <script src="index.js"></script>
+</body>
+</html>

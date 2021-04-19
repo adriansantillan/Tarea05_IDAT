@@ -1,0 +1,40 @@
+body{
+    display: grid;
+    grid-template-columns: 4fr;
+    grid-template-rows: 30% auto;
+    gap: 10px;
+    border: solid black;
+    
+}
+
+header{
+    grid-column: 1/5;
+    justify-self: center;
+    
+}
+
+main{
+    grid-column: 1/5;
+          
+}
+
+main #filtros{
+    height: 70px;
+    background-color:chartreuse;
+    align-content: center;
+}
+
+main #tabla{
+   
+    background-color:darkgoldenrod;
+    border: solid black;
+}
+
+table {
+    width: 100%;
+    
+}
+
+th{
+    text-align: left;
+}
