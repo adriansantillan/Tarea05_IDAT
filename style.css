@@ -1,39 +1,46 @@
 body{
     display: grid;
     grid-template-columns: 4fr;
-    grid-template-rows: 30% auto;
+    grid-template-rows: 40% 40% auto;
     gap: 10px;
-    border: solid black;
+    
+
     
 }
 
 header{
     grid-column: 1/5;
-    justify-self: center;
+    border: solid black;
+    width: 100%;
+    background-color: #008CBA;
+    color: white;
+        
+}
+
+h2{
+    padding-left: 500px;
+}
+nav{
+    grid-column: 1/5;
+    border: solid black;
+    
     
 }
+
 
 main{
     grid-column: 1/5;
-          
+    background-color: #e1edf3;
 }
 
-main #filtros{
-    height: 70px;
-    background-color:chartreuse;
-    align-content: center;
-}
 
-main #tabla{
+#tabla{
    
-    background-color:darkgoldenrod;
+    
     border: solid black;
+    width: 100%;
 }
 
-table {
-    width: 100%;
-    
-}
 
 th{
     text-align: left;
