@@ -2,18 +2,18 @@ let seleccionCategoria = document.querySelector('#listadoCategoria');
 let nombreProducto = document.querySelector('#nombreProducto');
 let botonBuscar = document.querySelector('#botonBuscar');
 
-const llenarComboBox = () => {
-    
+const llenarComboBox = (event) => {
+    event.preventDefault();
     fetch('https://disenoydesarrolloapi.azurewebsites.net/api/Producto/Categorias')
     .then(response => response.json())
-    .then(data => data.categorias.forEach( (data) => {
+    .then(data => data.categorias.forEach( data => {
         seleccionCategoria.innerHTML += `<option> ${data} </option>`;
     }));
             
    
 }    
    
-llenarComboBox();
+window.addEventListener('load', llenarComboBox);
 
 
 const buscarProducto = (event) => {
