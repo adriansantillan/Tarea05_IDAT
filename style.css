@@ -45,3 +45,13 @@ main{
 th{
     text-align: left;
 }
+
+.iconoModificar {
+    height: 20px;
+    width: 20px;
+}
+
+.iconoEliminar {
+    height: 20px;
+    width: 20px;
+}
