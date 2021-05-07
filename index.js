@@ -3,6 +3,7 @@ let nombreProducto = document.querySelector('#nombreProducto');
 let botonBuscar = document.querySelector('#botonBuscar');
 const categoriasAPIUrl = "https://disenoydesarrolloweb.azurewebsites.net/api/Producto/Categorias";
 const productosAPIUrl = "https://disenoydesarrolloweb.azurewebsites.net/api/Producto/";
+let body = document.querySelector("body");
 
 const llenarComboCategorias = (event) => {
     event.preventDefault();
@@ -44,13 +45,24 @@ const obtenerDatosAPI = () => {
 }
 
 const renderizarTabla = (listaProductos) => {
+    
     let contenidoTabla = document.querySelector('#contenidoTabla');
+    let contenido = '';
     contenidoTabla.innerHTML = '';
 
-    listaProductos.forEach (producto => {
-        contenidoTabla.innerHTML += '<tr><td>' + producto.codigo + '</td><td>' + producto.nombre + '</td><td>' + producto.categoria + '</td><td>' + producto.precio +'</td><td>' + producto.proveedor + '</td><td><button class="boton-modificar"><img src="Iconos/modificar.png" class="iconoModificar" alt="Icono para modificar"></button></td><td><button class="boton-eliminar"><img src="Iconos/eliminar.jpg" class="iconoEliminar" alt="Icono para eliminar"></button></td></tr>'
-    });    
-
+    listaProductos.forEach ((producto, index) => {
+        contenido += `<tr>
+        <td> ${producto.codigo} </td>
+        <td> ${producto.nombre} </td>
+        <td> ${producto.categoria} </td>
+        <td> ${producto.precio} </td>
+        <td> ${producto.proveedor} </td>
+        <td><button class='boton-modificar' value=${producto.id}><img src="Iconos/modificar.png" class="iconoModificar" alt="Icono para modificar"></button></td>
+        <td><button class='boton-eliminar' value=${producto.id}><img src="Iconos/eliminar.jpg" class="iconoEliminar" alt="Icono para eliminar"></button></td>
+        </tr>`
+    });
+    
+    contenidoTabla.innerHTML = contenido;
 
 }
 
@@ -69,7 +81,7 @@ const leerDatosLocalStorage =() => {
 }
 
 const eliminarProducto =(event) =>{
-
+    
     event.preventDefault();
     if (event.target.className == 'boton-eliminar'){
 
@@ -77,7 +89,7 @@ const eliminarProducto =(event) =>{
         
         if(confirmado){
 
-            fetch(`${productosAPIUrl}/${id}`,
+            fetch(`${productosAPIUrl}/${event.target.value}`,
             {
                 method : 'DELETE'
             })
@@ -91,7 +103,7 @@ const eliminarProducto =(event) =>{
             })
             }
         else{
-            alert("producto no eliminado");
+            alert("Producto no eliminado");
         }
     }
 }
