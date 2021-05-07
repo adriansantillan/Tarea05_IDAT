@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/edde6265f2.js" crossorigin="anonymous"></script>
+    <title>Tarea3_Grupo5</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+            
+           
+            <h1 id="titulo">Sistema integrado de gestión</h1>
+            
+
+            <div id="usuariocabecera">
+            <img class="usuario" src="Imagenes/usuario.jpeg" alt="Foto del usuario">
+            <span>
+            <label>
+                    Usuario
+            </label>
+            </span>
+            
+       
+    </header>
+    <nav>
+        <div id="menu-hamburguesa">
+            <button class="boton-hamburguesa">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="menu-movil">
+                <div class="item-menu-movil">
+                    <i class="fas fa-home"></i><label for="agregar_producto">Inicio</label> 
+                </div>
+                <div class="item-menu-movil">
+                    <i class="fas fa-user" aria-hidden="true"></i><label fot="administrar_categorías">Usuarios</label>
+                </div>
+                <div class="item-menu-movil">
+                   <i class="fas fa-users" aria-hidden="true"></i><label for="existencias">Clientes</label>
+                </div>
+                <div class="item-menu-movil">
+                  <i class="fas fa-database" aria-hidden="true"></i><label for="administrar_pagos">Proveedores</label>
+                </div>
+                <div class="item-menu-movil">
+                    <i class="fas fa-qrcode" aria-hidden="true"></i><label for="administrar_pagos">Productos</label>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <div class="navmovil">       
+        <ul>
+            <li>
+
+                <div class="oculto">
+
+
+                </div>
+
+                <div class="ulnav ingreso">
+                
+                <ul>
+                    <li id="botonuser"><img  src="Imagenes/usuario.jpeg" alt="Simbolo de suma para agregar producto"><br><label for="agregar_producto">user</label>
+                    <li  class="button button5"><i class="fa fa-home fa-2x" aria-hidden="true"></i><br><label for="Inicio">Inicio</label> 
+	                <li  class="button button5"><i class="fas fa-user fa-2x" aria-hidden="true"></i><br><label fot="Usuario">Usuarios</label>
+	                <li  class="button  button5"><i class="fas fa-users fa-2x" aria-hidden="true"></i><br><label for="Clientes">Clientes</label>
+	                <li  class="button  button5"><i class="fas fa-database fa-2x" aria-hidden="true"></i><br><label for="Proveedores">Proveedores</label>
+                        <li id="boton4" class="button  button5"><i class="fas fa-qrcode fa-2x" aria-hidden="true"></i><br><label for="Productos">Productos</label>
+                
+                </ul>
+
+                </div>
+                </li>
+                
+        </ul>
+        </div> 
+            
+        
+
+        <div class="ulnav2">
+
+            <ul>   
+                
+                <li id="formbuscar">
+                    <label for="buscador">Buscar en la web</label>
+                    <input type="search" id="inputbuscador" placeholder="Buscar">
+            
+                    <button id="botonbuscar"  >
+                        <i class="fas fa-search" aria-hidden="true"></i>    
+                    </button>
+            </ul>
+        </div>
+                
+    </nav>
+
+    <main>
+        <br>
+        <br>
+       <div class="formulario">
+        <fieldset>
+            <br>
+            <legend>Agregar Producto</legend>
+            <form id="formain">
+                <label id="lacodigo" for="código">Código* </label>
+                <span id="span1">
+                    <input type="tel" id="código" placeholder="Solo números" maxlength="6" pattern="[0-9]{6}" title="Debes ingresar 6 números" required>
+                    <button type="submit" id=validar value="Validar" class="buttonForm button2">Validar</button>
+                </span>
+                <br>  
+                <br>   
+                <label for="nombre">Nombre*</label>
+                <input type="text" id="nombre" placeholder="Solo letras y números" pattern="[a-zA-Z0-9]{2,100}" title="Debes ingresar solo letras y números" required>
+                <br>
+                <br>
+                <label for="abreviatura">Abreviatura</label>
+                <input type="text" id="abreviatura" maxlength="10" placeholder="Solo letras" pattern="[a-zA-Z]{2,10}" title="Debes ingresar solo letras" required>
+                <br>
+                <br>
+                <label for="categoría">Categoría*</label>
+                <select id="categoría" required>
+                <option value="categoría">Lácteos</option>
+                <option value="categoría">Panes especiales</option>
+                <option value="categoría">Pasteles</option>
+                </select>
+                <br>
+                <br>
+                <label for="ruc">RUC Proveedor*</label>
+                <input type=tel id="ruc" placeholder="Solo números" pattern="[0-9]{11}" maxlength="11" title="Debes ingresar 11 números" required>
+                <br>
+                <br>
+                <label for="precio">Precio*</label>
+                <input type="number" id="precio" step="0.01" title="Solo números decimales con 2 dígitos" required>
+                <br>
+                <br>
+                <label for="color_etiqueta">Color de etiqueta</label>
+                <input type="color" id="color_etiqueta">
+                <br>
+                <br>
+                <label for="fecha">Fecha*</label>
+                <input type="date" id="fecha" required>
+                <br>
+                <br>
+                <label for="estado">Estado*</label>
+                <br>
+                <label for="activo">Activo</label>
+                <input type="radio" id="activo" name="estado" required>
+                <label for="Suspendido">Suspendido</label>
+                <input type="radio" id="Suspendido" name="estado">
+                <label for="De baja">De baja</label>
+                <input type="radio" id="De baja" name="estado">
+                <br>
+                <br>
+                <label for="impuesto">Afecto a impuesto*</label>
+                <input type="checkbox" id="impuesto" required>
+                <br>
+                <br>
+                <label for="foto">Foto  </label>
+                <input type="file" id="foto" accept="image/png , image/jpg">
+                <br> 
+                <br>
+                <label for="descripción">Descripción</label>
+                <textarea id="descripción"></textarea>
+                <br>
+                <br>
+                <span id="span2">
+                    <button type="submit" value="grabar" class="buttonForm button2">Grabar</button>
+                    <button type="reset" value="limpiar" class="buttonForm button2">Limpiar</button>
+                </span>
+            </form>
+        </fieldset>
+        <br>
+        <br>
+        </div>
+    </main>
+
+    <footer>
+        <div id="que_hacemos" >
+            <a href="#">¿Qué hacemos?</a>
+        </div>
+        <div id="enlaces">
+            <a href="#">
+                Enlaces principales
+            </a>
+        </div>
+        <div id="contáctanos">
+            <a href="#">
+                Contáctanos
+            </a>
+        </div>
+
+    </footer>
+
+    
+
+</body>
+</html>

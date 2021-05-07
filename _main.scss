@@ -1,0 +1,187 @@
+$border-style: solid black;
+$main-fontfamily: Courier New, Courier, monospace;
+$breakpoint-larger-tablet: 870px;
+$breakpoint-tablet: 528px;
+$breakpoint-smartphone: 446px;
+@import 'mixins';
+
+main {
+    @include style-background-main;
+    color: black;
+    grid-column: 1/5;
+    border: $border-style;
+    font-family: $main-fontfamily;
+    display: grid;
+    gap: 10px;
+    justify-content: center;
+    background-color: #e1edf3;
+    
+    form#formain input{
+      border: 2px solid #8c8c8c;
+      border-radius: 5px;
+      height: 25px;
+    }
+    .buttonForm {
+  
+      color: white;
+      padding: 16px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      transition-duration: 0.4s;
+      cursor: pointer;
+    }
+    .button2 {
+      background-color: white; 
+      color: black; 
+      text-align: center;
+      border: 2px solid #008CBA;
+      padding: 12px 2px;
+      border-radius: 4px;
+    }
+    .button2:hover {
+      background-color: #008CBA;
+      color: white;
+    }
+    fieldset {
+      width: 50vw;
+      display: grid;
+    }
+    #span1 input {
+      justify-content: stretch;
+      width: 30%;
+      height: 20px;
+      margin: 0px;
+      padding: 0px;
+    }
+    
+    #span1 button {
+      justify-content: stretch;
+      width: 25%;
+      height: 26  px;
+      margin-left: 2px;
+      padding: 0px;
+    }
+   
+    #formain {
+      justify-content: center;
+    }
+    #formain  #foto {
+      width: 60%;
+    }
+    #span2 {
+      display: block;
+      text-align: center;
+    }
+    #span2 > button {
+      width: 180px;
+      margin: 0.5%;
+    }
+    fieldset input:required:focus:valid {
+      background: url("https://assets.digitalocean.com/labs/icons/hand-thumbs-up.svg") no-repeat 95% 50% #e3ffaa;
+      background-size: 18px;
+      border-color: green;
+    }
+    fieldset input:required:focus:invalid {
+      background: url("https://assets.digitalocean.com/labs/icons/exclamation-triangle-fill.svg") no-repeat 95% 50% #ffaea6;
+      background-size: 18px;
+      border-color: rgb(201, 182, 18);
+    }
+    #formain #categoría
+    {
+      width: 177px;
+      margin-left: 15px;
+    }
+    #formain #fecha
+    {
+      width: 177px;
+    }
+    #formain input {
+      margin-left: 15px;
+    }
+    #formain label {
+      margin-left: 10%;
+      display: inline-block;
+      width: 100px;
+    }
+    textarea {
+      margin-left: 15px;
+      resize: none;
+    }
+ 
+}
+
+  @media screen and (max-width: $breakpoint-larger-tablet)
+    {
+    main fieldset {
+    width: 85vw;
+    display: grid;
+    }
+    main #formain  #foto {
+    margin-left: 15px;
+    width: 55%;
+    }
+
+    }
+
+    @media screen and (max-width: $breakpoint-tablet)
+    {
+   
+ 
+    main #formain label {
+        margin-left: 5%;
+        display: inline-block;
+        width: auto;
+        }
+    main #formain {
+        justify-content: stretch;
+        display: grid;
+        }
+    main #formain #categoría
+        {
+    margin-left: 15px;
+    width: auto;
+    
+        }
+    main #formain  #foto {
+        margin-left: 15px;
+        width:80%;
+    }
+    main #span1 button {
+      justify-content: stretch;
+      width: 35%;
+      height: 27px;
+      margin: 0px;
+      padding: 0px;
+      margin-left: 0px;
+    }
+    }
+
+    @media screen and (max-width: $breakpoint-smartphone)
+{
+  
+ 
+  main #span1  {
+    justify-content: stretch;
+    width: auto;
+    height: 20px;
+    margin: 0px;
+    padding: 0px;
+    ;
+    
+  }
+  main #span2 > button {
+    width: 45%;
+    margin: 0.5%;
+  }
+  main #formain #fecha {
+    width: 172px;
+  }
+  main #formain label {
+    margin-left: 5%;
+    display: inline-block;
+    width: auto;
+  }
+    }

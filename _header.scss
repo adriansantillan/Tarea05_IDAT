@@ -1,0 +1,43 @@
+$header-fontfamily: Verdana, Geneva, sans-serif;
+$border-style: solid black;
+$breakpoint-tablet: 528px;
+@import 'mixins';
+
+header {
+    grid-column: 1/5;
+    display: grid;
+    grid-auto-columns: 4fr;
+    grid-template-columns: 15% 20% 40% auto;
+    color: white;
+    font-family: $header-fontfamily;
+    background-color: #008CBA;
+    animation-name: example;
+    animation-duration: 4s;
+    #titulo {
+      display: grid;
+      grid-column: 3/4;
+      justify-self: start;
+      align-content: center;
+      padding-bottom: 10px;
+    }
+    #usuariocabecera {
+      grid-column: 4/5;
+      justify-self: center;
+      align-self: center;
+    }
+    img {
+        @include style-img-usuariocabecera;
+    }
+  }
+
+  @media screen and (max-width:$breakpoint-tablet)
+{
+   
+  header #titulo {
+      display: grid;
+      grid-column: 2/4;
+      justify-self: start;
+      align-content: center;
+      padding-bottom: 10px;
+  }
+}

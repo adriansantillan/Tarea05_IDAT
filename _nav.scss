@@ -1,0 +1,278 @@
+$border-style: solid black;
+$breakpoint-tablet: 528px;
+$breakpoint-larger-tablet: 870px;
+$breakpoint-smartphone: 446px;
+$breakpoint-smaller-smartphone: 360px;
+
+nav{
+        
+    grid-column: 1/5;
+    border: $border-style; 
+    padding: 0px; 
+    margin: 0px;  
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 2fr 1fr ;
+    padding:0px;
+    margin: 0px;
+    .navmovil .oculto button {
+      visibility: hidden;
+      display: none;
+    }
+    .navmovil ul li 
+    {
+        width: 100%;
+    }
+     .navmovil ul li .ulnav {
+    height: 100%;
+    }
+    .navmovil ul li .ulnav ul li
+    {
+        border-right: $border-style 1px;
+    }
+    .navmovil ul {
+      padding: 0;
+      margin: 0;
+      align-self: center;
+      justify-content: center;
+      display: flex;
+      text-align: center;
+      list-style-type: none;
+      width: 100%;
+      height: 100%;
+    }
+    .navmovil ul #botonuser {
+      visibility: hidden;
+      display: none;
+    }
+    .navmovil ul #boton5 {
+      visibility: hidden;
+      display: none;
+    }
+    .ulnav2 ul {
+      padding: 0;
+      margin: 0;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      text-align: center;
+      list-style-type: none;
+      height: 100%;
+    }
+    .ulnav2 li #lupa {
+      width: 20px;
+      height: 20px;
+    }
+    img {
+      width: 30px;
+      height: 30px;
+    }
+    .ingreso{
+    
+      background-color: rgb(255, 255, 255);
+      font-weight: bold;
+      position: relative;
+      animation: mymove 1.5s ;
+      animation-timing-function: ease-in-out;
+      }
+    @keyframes mymove {
+          from {left: 0px;}
+          to {left: 100px;}
+          to {right: 100px;}
+        }
+        #formbuscar{
+          width:100%;
+        }
+      .button {
+      color: white;
+      margin: 0.5%;
+      padding: 1.5%;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      transition-duration: 0.4s;
+      cursor: pointer;
+      }
+      .boton-hamburguesa{
+          padding: 15px;
+            border: 2px solid #4d4d4d;
+            border-radius: 7px;
+            background-color: white;
+        }
+        
+        #menu-hamburguesa{
+          display: none;
+          visibility: hidden;
+        
+        }
+      .button5 {
+          background-color: white;
+          color: black;
+        border-radius: 5px;
+          border: 2px solid #555555;
+        }
+        
+      .button5:hover {
+          background-color: #555555;
+          color: white;
+        }
+      input[type=search] {
+          width: 30%;
+          transition: all 0.4s ease-in-out;
+        }
+        
+      input[type=search]:focus {
+          width: 50%;
+        }
+        
+      @keyframes example {
+          from {background-color: #008CBA;}
+          to {background-color: black;}
+      }
+       .menu-movil {
+          background-color: black;
+          position: absolute;
+          z-index: 2;
+          top: 260px;
+          left: 8px;
+          width: 25%;
+          display: none;
+          visibility: hidden;
+          opacity: 70%;
+          padding: 15px 0px 15px 15px;
+        }
+      .item-menu-movil{
+        color: white;
+        font-weight: bolder;
+        margin: 5px auto;
+        padding: 2.5%;
+      }
+      .item-menu-movil i{
+        margin-right: 15px;
+      }
+
+  
+}
+
+  @media screen and (max-width: $breakpoint-larger-tablet)
+  {
+    
+     nav .navmovil{
+    display: none;
+    visibility: hidden;
+      }
+  
+     nav #menu-hamburguesa{
+    display: inline-block;
+    visibility: visible;
+    margin: 12%;
+      }
+      nav .navmovil{
+        display: none;
+        visibility: hidden;
+          }
+  
+      #menu-hamburguesa .boton-hamburguesa:hover {
+    background-color: rgb(0, 0, 0);
+    color: white;
+      }
+  
+      #menu-hamburguesa .boton-hamburguesa:hover + div.menu-movil, #menu-hamburguesa .menu-movil:hover{
+    
+    display: block;
+    visibility: visible;                                          
+      }
+  
+     nav .ulnav2{
+    padding: 2%;
+    display: inline-block;
+      }
+  
+  
+      #inputbuscador {
+    width: 30%;
+    transition: all 0.4s ease-in-out;
+      }
+  
+      #inputbuscador:focus {
+    width: 50%;
+      }
+  
+      nav {
+      grid-column: 1/5;
+      border: $border-style;
+      padding: 0px;
+      margin: 0px;
+      display: grid;
+      grid-template-rows: 1fr;
+      grid-template-columns: auto 90% ;
+      padding: 0px;
+      margin: 0px;
+      }
+    }
+
+    @media screen and (max-width: $breakpoint-tablet)
+    {
+    
+    #inputbuscador
+    {
+        width:30%;
+    }
+    
+
+    #inputbuscador:focus {
+        width: 50%;
+    }
+
+    nav .ulnav2 ul #formbuscar button label
+    {
+        display :none
+    }
+    nav .menu-movil {
+      top: 330px;
+        width: 30%;
+        width: 49%;
+        opacity: 80%;
+    }
+
+  
+       
+    }
+
+    @media screen and (max-width: $breakpoint-smartphone)
+{  
+nav .menu-movil {
+     left: 8px;
+      width: 49%;
+      opacity: 80%;
+      top: 330px;
+      }
+    nav .ulnav2  ul #formbuscar label
+        {
+          display: none;
+          visibility: hidden;
+        }
+        nav .ulnav2  ul #formbuscar input
+        {
+          width: 40%;
+        }
+     
+}
+    
+    @media screen and (max-width: $breakpoint-smaller-smartphone)
+    {
+    .menu-movil {
+        background-color: black;
+        position: absolute;
+        top: 342px;
+        left: 8px;
+        width: 40%;
+        display: none;
+        visibility: hidden;
+        opacity: 66%;
+        padding: 15px 0px 15px 15px;
+        }
+        
+        
+    }

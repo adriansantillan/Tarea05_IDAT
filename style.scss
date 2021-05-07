@@ -1,0 +1,24 @@
+@import 'header';
+@import 'nav';
+@import 'main';
+@import 'footer';
+
+
+$border-style: solid black;
+$header-fontfamily: Verdana, Geneva, sans-serif;
+$main-fontfamily: Courier New, Courier, monospace;
+
+
+body {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  grid-template-columns: 1fr auto auto 1fr;
+  grid-template-rows: 15% auto auto 8%;
+  gap: 10px;
+}
+
+
+
+  
+

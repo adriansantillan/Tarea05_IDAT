@@ -108,5 +108,16 @@ const eliminarProducto =(event) =>{
     }
 }
 
+const modificarProducto = (event) =>{
+    
+    event.preventDefault();
+
+    if (event.target.className == 'boton-modificar') 
+
+        window.location.href = "producto.html";
+    
+}
+
 window.addEventListener('load', leerDatosLocalStorage);
 body.addEventListener('click', eliminarProducto);
+body.addEventListener('click', modificarProducto);
