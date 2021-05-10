@@ -151,7 +151,29 @@ nav{
       .item-menu-movil i{
         margin-right: 15px;
       }
-
+      .ulnav-ingreso ul li:hover .submenuProductos {
+        display: flex;
+      }
+      
+      .submenuProductos {
+        display: none;
+        position: relative;
+      }
+      
+      .submenuProductos ul {
+        position: absolute;
+        top: 5px;
+        left: -5px;
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .submenuProductos ul li {
+        width: 100%;
+        padding: 5px;
+        white-space: nowrap;
+        background: cornflowerblue;
+      }
   
 }
 

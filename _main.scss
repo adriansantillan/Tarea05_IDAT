@@ -110,7 +110,10 @@ main {
       margin-left: 15px;
       resize: none;
     }
- 
+    #mainFrame {
+      height: 80vh;
+      width: 100%;
+    }
 }
 
   @media screen and (max-width: $breakpoint-larger-tablet)

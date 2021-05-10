@@ -226,6 +226,33 @@ nav .item-menu-movil {
 nav .item-menu-movil i {
   margin-right: 15px;
 }
+nav .ulnav-ingreso ul li:hover .submenuProductos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+nav .submenuProductos {
+  display: none;
+  position: relative;
+}
+nav .submenuProductos ul {
+  position: absolute;
+  top: 5px;
+  left: -5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+nav .submenuProductos ul li {
+  width: 100%;
+  padding: 5px;
+  white-space: nowrap;
+  background: cornflowerblue;
+}
 
 @media screen and (max-width: 870px) {
   nav .navmovil {
@@ -443,6 +470,10 @@ main #formain label {
 main textarea {
   margin-left: 15px;
   resize: none;
+}
+main #mainFrame {
+  height: 80vh;
+  width: 100%;
 }
 
 @media screen and (max-width: 870px) {
