@@ -114,6 +114,7 @@ const modificarProducto = (event) =>{
 
     if (event.target.className == 'boton-modificar') 
 
+        window.localStorage.setItem('id', event.target.value);
         window.location.href = "producto.html";
     
 }

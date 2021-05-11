@@ -11,11 +11,11 @@
     <div class="formulario">
         <fieldset>
             <br>
-            <legend>Agregar Producto</legend>
+            <legend>Agregar/Modificar Producto</legend>
             <form id="formain">
-                <label id="lacodigo" for="código">Código* </label>
+                <label id="lacodigo" for="codigoProducto">Código* </label>
                 <span id="span1">
-                    <input type="tel" id="código" placeholder="Solo números" maxlength="6" pattern="[0-9]{6}" title="Debes ingresar 6 números" required>
+                    <input type="tel" id="codigoProducto" placeholder="Solo números" maxlength="6" pattern="[0-9]{6}" title="Debes ingresar 6 números" required>
                     <button type="submit" id=validar value="Validar" class="buttonForm button2">Validar</button>
                 </span>
                 <br>  
@@ -25,11 +25,11 @@
                 <br>
                 <br>
                 
-                <label for="categoría">Categoría*</label>
-                <select id="categoría" required>
-                <option value="categoría">Lácteos</option>
-                <option value="categoría">Panes especiales</option>
-                <option value="categoría">Pasteles</option>
+                <label for="categoria">Categoría*</label>
+                <select id="categoria" required>
+                <option value="categoria">Lácteos</option>
+                <option value="categoria">Panes especiales</option>
+                <option value="categoria">Pasteles</option>
                 </select>
                 <br>
                 <br>
@@ -66,7 +66,7 @@
                 <br>
                 <br>
                 <span id="span2">
-                    <button type="submit" value="grabar" class="buttonForm button2">Grabar</button>
+                    <button type="submit" value="grabar" id="botonGrabar" class="buttonForm button2">Grabar</button>
                     <button type="reset" value="limpiar" class="buttonForm button2">Limpiar</button>
                 </span>
             </form>
@@ -75,5 +75,6 @@
         <br>
         </div>
     </main>
+    <script src="producto.js"></script>
 </body>
 </html>
